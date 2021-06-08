@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--SMTP Libraries-->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+   <!-------Firebase Libraries----------->
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+   <!---------Stylesheet link------------>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body{
+      padding:20px;
+    }
+    form {
+      float: left;
+      padding-left: 300px;
+      padding-right: 100px;
+      padding-top: 50px;
+      height:60%;
+      width: 70%;
+    }
+    /* #displaycost{
+      display: inline;
+      height: 70%;
+      width: 50%;
+      padding: 600px;
+    } */
+    h3 {
+      text-align: center;
+    }
+    .image {
+      display: inline;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form action="mailto:namilagshetti18@gmail.com" method="post" enctype="text/plain">
+    <h3>Book an Event</h3>
+
+    <div class="form-group">
+      <label >Booking Id : </label>
+      <label name="Booking Id" id="bid"></label><br>
+      <small>Please copy paste the booking id to your mail box message!!!!</small>
+    </div>
+
+    <div class="form-group">
+      <label>Event Type : </label>
+      <select class="form-control" name="Event Type" id="type">
+        <option>Birthday Celebration</option>
+        <option>Marriage </option>
+        <option>Naming Ceremony</option>
+        <option>Engagement</option>
+        <option>Reception</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Event Place : </label>
+      <select class="form-control" name="Event Place" id="venu">
+        <option>Balaji Sarovar</option>
+        <option>Krishna Function Hall</option>
+        <option>Hotel Saiprasad Executive</option>
+        <option>Motiwala Multipurpose Hall</option>
+        <option>Hotel City Park</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>No. of Guest :</label>
+      <input class="form-control" id="bguest" name="No of Guest" type="number" placeholder="No of Guest" required>
+    </div>
+
+    <div class="form-group">
+      <label>Date :</label>
+      <input class="form-control" id="bdate" name="Event Date" type="date" placeholder="Date" required>
+    </div>
+
+    <div class="form-group">
+      <label>Equipments :</label>
+      <input class="form-control" id="bequipment" name="Equipments" type="text" placeholder="Equipments" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Food Type :</label>
+      <input class="form-control" id="bfood" name="Food Type" type="text" placeholder="Food Type" required>
+    </div>
+
+    <div class="form-group">
+      <label>Decoration :</label>
+      <select class="form-control" name="Decoration" id="bdecoration">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit" id="bsearch">Book Event</button>
+    </div>
+
+  </form>
+  <div id="displaycost">
+    
+  </div>
+
+  <!-------------------------Script--------------------------->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAAK-e86Ywt-DdB2b6-f4YuaXjBzYfFflQ",
+      authDomain: "my-firebase-demo-37ad7.firebaseapp.com",
+      databaseURL: "https://my-firebase-demo-37ad7.firebaseio.com",
+      projectId: "my-firebase-demo-37ad7",
+      storageBucket: "my-firebase-demo-37ad7.appspot.com",
+      messagingSenderId: "241994586303",
+      appId: "1:241994586303:web:28b77f148a2443ff354e0a",
+      measurementId: "G-7NSQ8BM159"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+  </script>
+
+  <script src="bookevent.js"></script>
+
+</body>
+
+</html>

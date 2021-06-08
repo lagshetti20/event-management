@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Contact Us</title>
+    <style>
+      .container{
+        padding-top: 50px;
+        padding-left:100px;
+      }
+      h3{
+        text-align: center;
+      }
+      img{
+        height: 100px;
+        width: 150px;
+        padding-right:20px ;
+      }
+      #cimg,.clabel{
+        float: left;
+        color: crimson;
+      }
+          
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h3>Contact Us</h3>
+      <br><hr>
+      <div id="cimg"><img src="\images\contact1.jpg"></div>
+      <div class="clabel">
+        <label>Email : namilagshetti18@gmail.com</label><br>
+        <label>Mobile : +91 7743822568</label>
+      </div>
+  <br>
+  <br>
+  <br>
+  
+      <form action="mailto:namilagshetti18@gmail.com" method="post" enctype="text/plain">
+        <br> <hr><br>
+        <div class="form-group">
+          <label>Your Name : </label>
+          <input type="text" name="Customer Name" class="form-control" id="full_name" placeholder="Enter Full Name">
+        </div>
+        <div class="form-group">
+          <label>Your Email : </label>
+          <input type="email" name="Customer Email" class="form-control" id="mail" placeholder="Enter Email Address">
+        </div>
+        <div class="form-group">
+          <label>Your Message : </label>
+          <textarea name="Message" id="msg" class="form-control" placeholder="Text Message" ></textarea>
+        </div>
+        <div class="form-group">
+          <button id="send" class="btn btn-primary">Send Email</button>
+        </div>
+      </form>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-------Firebase Libraries----------->
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    form {
+      padding: 100px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .image {
+      display: inline;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form>
+    <h3>Add Venue</h3>
+    <div class="form-group">
+      <label>Venu Name</label>
+      <input class="form-control" id="vname" type="text" placeholder="Venu Name" required>
+    </div>
+    <div class="form-group">
+      <label>Venu Address</label>
+      <input class="form-control" id="address" type="text" placeholder="Venu Address" required><br>
+      <input class="form-control" id="address1" type="text" placeholder="Venu Address" required>
+    </div>
+    <div class="form-group">
+      <label>Venu Phone No</label>
+      <input class="form-control" id="contact" type="text" placeholder="Venu Phone No" required>
+    </div>
+    <div class="form-group">
+      <label>Capacity</label>
+      <input class="form-control" id="capacity" type="number" placeholder="Capacity" required>
+    </div>
+    <div class="form-group">
+      <label>Prefered For</label>
+      <select class="form-control" id="type">
+        <option>Birthday Celebration</option>
+        <option>Marriage </option>
+        <option>Naming Ceremony</option>
+        <option>Engagement</option>
+        <option>Reception</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Rs.</label>
+      <input class="form-control" id="price" type="number" placeholder="Rs" required>
+    </div>
+    <div class="form-group">
+      <label>Venu Image</label>
+      <img id="venuImg"><label id="upProgress"></label>
+      <button class="btn btn-primary" id="selectImg">Select</button>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" id="addVenu">Add Venue</button>
+    </div>
+  </form>
+
+
+  <!-------------------------Script--------------------------->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAAK-e86Ywt-DdB2b6-f4YuaXjBzYfFflQ",
+      authDomain: "my-firebase-demo-37ad7.firebaseapp.com",
+      databaseURL: "https://my-firebase-demo-37ad7.firebaseio.com",
+      projectId: "my-firebase-demo-37ad7",
+      storageBucket: "my-firebase-demo-37ad7.appspot.com",
+      messagingSenderId: "241994586303",
+      appId: "1:241994586303:web:28b77f148a2443ff354e0a",
+      measurementId: "G-7NSQ8BM159"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="addvenue.js"></script>
+</body>
+
+</html>

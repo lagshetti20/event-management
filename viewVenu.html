@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    form {
+      padding-top: 50px;
+      padding-right: 300px;
+      padding-left: 200px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form>
+    <h3>View Venu</h3>
+    <div class="form-group">
+      <label>Venu Type : </label>
+      <select class="form-control" id="type">
+        <option>Birthday Celebration</option>
+        <option>Marriage </option>
+        <option>Naming Ceremony</option>
+        <option>Engagement</option>
+        <option>Reception</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Venu</label>
+      <select class="form-control" id="venu">
+        <option>Balaji Sarovar</option>
+        <option>Krishna Function Hall</option>
+        <option>Hotel Saiprasad Executive</option>
+        <option>Motiwala Multipurpose Hall</option>
+        <option>Hotel City Park</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" name="search" id="search">Search</button><br>
+    <div class="form-group">
+      <label  id="vcost">Cost :  </label>
+    </div>
+    <div>
+      <label>Venu Image :  </label>
+      <img  id="venuImg">
+    </div>
+  </form>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAAK-e86Ywt-DdB2b6-f4YuaXjBzYfFflQ",
+      authDomain: "my-firebase-demo-37ad7.firebaseapp.com",
+      databaseURL: "https://my-firebase-demo-37ad7.firebaseio.com",
+      projectId: "my-firebase-demo-37ad7",
+      storageBucket: "my-firebase-demo-37ad7.appspot.com",
+      messagingSenderId: "241994586303",
+      appId: "1:241994586303:web:28b77f148a2443ff354e0a",
+      measurementId: "G-7NSQ8BM159"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="viewvenue.js"></script>
+</body>
+
+</html>

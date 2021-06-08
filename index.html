@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    h1 {
+      text-align: center;
+      color: purple;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(108, 158, 165);
+    }
+
+    li {
+      float: left;
+      padding-left: 120px;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: rosybrown;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+  
+  <h1>Event Management System</h1>
+  <ul>
+    <li><a class="active" href="home.html" target="iframe_center">Home</a></li>
+    <li><a href="adminLogin.html" target="iframe_center">Admin Login</a></li>
+    <li><a href="customerRegisteration.html" target="iframe_center">Customer Registration</a></li>
+    <li><a href="CustomerLogin.html" target="iframe_center">Customer Login</a></li>
+    <li><a href="aboutUs.html" target="iframe_center">About Us</a></li>
+    <li><a href="contactUs.html" target="iframe_center">Contact Us</a></li>
+  </ul>
+  <br>
+  <br>
+  <iframe src="home.html" name="iframe_center" height="650px" width="100%" title="Iframe Example"></iframe>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+  <head>
+    <title>View Admin Profile</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      h3{
+        text-align: center;
+      }
+      .container{
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>View Admin Profile</h3>
+      <br>
+      <table class="table">
+        <thead>
+          <th>UserName</th>
+          <th>Password</th>
+        </thead>
+        <tbody id="tbody1">
+  
+        </tbody>
+      </table>
+  
+    </div>
+
+   
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAAK-e86Ywt-DdB2b6-f4YuaXjBzYfFflQ",
+        authDomain: "my-firebase-demo-37ad7.firebaseapp.com",
+        databaseURL: "https://my-firebase-demo-37ad7.firebaseio.com",
+        projectId: "my-firebase-demo-37ad7",
+        storageBucket: "my-firebase-demo-37ad7.appspot.com",
+        messagingSenderId: "241994586303",
+        appId: "1:241994586303:web:28b77f148a2443ff354e0a",
+        measurementId: "G-7NSQ8BM159"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="aprofile.js"></script>
+  </body>
+</html>
